@@ -32,7 +32,7 @@ module.exports = {
                 loader: 'style-loader!css-loader!autoprefixer-loader'
             },
             {
-                text: /\.scss$/,
+                test: /\.scss$/,
                 loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader'
             }
         ]
