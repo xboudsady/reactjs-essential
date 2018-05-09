@@ -13,13 +13,20 @@ module.exports = {
         port: 3000
     },
     module: {
-        loaders: [{
-            test: /\.js$/,
-            exclude: /(node_modules)/,
-            loader: ["babel-loader"],
-            query: {
-                presets: ["latest", "stage-0", "react"]
+        loaders: [
+            {
+                test: /\.js$/,
+                exclude: /(node_modules)/,
+                loader: ["babel-loader"],
+                query: {
+                    presets: ["latest", "stage-0", "react"]
+                }
+            },
+            {
+                test: /\.json$/,
+                exclude: /(node_modules)/,
+                loader: "json-loader"
             }
-        }]
+        ]
     }
 }
